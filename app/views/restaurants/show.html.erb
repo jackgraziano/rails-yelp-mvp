@@ -1,8 +1,19 @@
-<h1>This is a restaurant</h1>
+<div class="container">
 
-<%= @restaurant.name %>
+  <h1><%= @restaurant.name %></h1>
 
+  <p class="text-center"><%= @restaurant.address %>, <%= @restaurant.phone %></p>
 
-<p>
-  <%=link_to 'Back', restaurants_path %>
-</p>
+  <h5>We have <%= @reviews.count %> reviews for this restaurant: </h5>
+
+  <ul>
+  <% @reviews.each do |review| %>
+    <li><%= review.content %></li>
+  <% end %>
+  </ul>
+
+  <p>
+    <%=link_to 'Back', restaurants_path %>
+  </p>
+
+</div>

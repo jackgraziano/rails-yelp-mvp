@@ -14,3 +14,10 @@
   rest.category = ["chinese", "italian", "japanese", "french", "belgian"].sample
   rest.save
 end
+
+100.times do
+  review = Review.new
+  review.restaurant_id = (1..20).to_a.sample
+  review.content = Faker::Hipster.words(5).join(" ").capitalize
+  review.save
+end
