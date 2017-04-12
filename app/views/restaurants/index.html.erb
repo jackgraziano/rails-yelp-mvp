@@ -1,7 +1,7 @@
-<h1>Restaurants</h1>
 
 <div class="container">
   <div class="row">
+    <h1>Restauripsters</h1>
 
     <% @restaurants.each do |restaurant| %>
       <div class="col-xs-12 col-sm-4">
@@ -9,6 +9,7 @@
           <h5><%= link_to restaurant.name, restaurant_path(restaurant.id) %></h5>
           <p><%= restaurant.category %></p>
           <p><%= restaurant.address %>, <%= restaurant.phone %></p>
+          <span class="add-a-review"><%= link_to 'Add a review', new_restaurant_review_path(restaurant) %></span>
         </div>
       </div>
     <% end %>
