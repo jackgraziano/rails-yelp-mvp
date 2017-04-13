@@ -37,3 +37,4 @@ gem 'simple_form'
 gem 'autoprefixer-rails'
 
 gem 'faker'
+gem "font-awesome-rails"

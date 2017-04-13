@@ -3,17 +3,24 @@
   <h1><%= @restaurant.name %></h1>
 
   <p class="text-center"><%= @restaurant.address %>, <%= @restaurant.phone %></p>
+  <div class='text-center'>
+    <%= avg_stars @restaurant %>
+  </div>
 
   <h5>We have <%= @reviews.count %> reviews for this restaurant: </h5>
 
   <ul>
   <% @reviews.each do |review| %>
-    <li><%= review.content %></li>
+    <li><%= review.content %>
+      <%= stars review %>
+    </li>
+
   <% end %>
   </ul>
 
   <p>
     <%=link_to 'Back', restaurants_path %>
   </p>
+
 
 </div>

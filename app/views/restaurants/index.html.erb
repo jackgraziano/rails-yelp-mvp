@@ -9,9 +9,12 @@
       <div class="col-xs-12 col-sm-4">
         <div class="restaurant-card">
           <h5><%= link_to restaurant.name, restaurant_path(restaurant.id) %></h5>
+          <p> <%= avg_stars restaurant %>
+            <span class="add-a-review">
+            <%= link_to 'Add a review', new_restaurant_review_path(restaurant) %></span>
+          </p>
           <p><%= restaurant.category %></p>
           <p><%= restaurant.address %>, <%= restaurant.phone %></p>
-          <span class="add-a-review"><%= link_to 'Add a review', new_restaurant_review_path(restaurant) %></span>
         </div>
       </div>
     <% end %>

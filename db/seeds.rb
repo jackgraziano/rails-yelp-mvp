@@ -19,5 +19,6 @@ end
   review = Review.new
   review.restaurant_id = (1..20).to_a.sample
   review.content = Faker::Hipster.words(5).join(" ").capitalize
+  review.stars = (1..5).to_a.sample
   review.save
 end
